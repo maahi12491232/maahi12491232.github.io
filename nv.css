@@ -1,0 +1,248 @@
+h1 {
+    margin: 0;
+    padding: 0;
+    background-color: #dddddd;
+}
+body {
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+    background-size: 400% 400%;
+    animation: gradient 5s ease-in-out infinite;
+    background-image: linear-gradient(45deg, #ffcccc, #ffffcc, #ccffff, #ffccff);
+    background-attachment: fixed;
+    color: black; /* Text color in light mode */
+}
+  
+body.dark-mode {
+    color: white; /* Text color in dark mode */
+    background-image: linear-gradient(45deg, #9d0000, #663704, #006666, #660066);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #d8ebe7;
+    border-radius: 10px;
+    box-shadow:  10px 10px 15px #aaaaaa, 
+                -10px -10px 15px #ffffff;
+}   
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 10px;
+    background-color: #dddddd;
+    box-shadow:  5px 5px 10px #aaaaaa, 
+                -5px -5px 10px #ffffff;
+}
+
+.navbar a::before {
+    content: attr(data-icon);
+    margin-right: 5px;
+}
+
+.navbar-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Add this line */
+}
+
+
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #dddddd;
+    position: relative;
+    box-shadow: inset 8px 8px 8px #aaaaaa, 
+                inset -8px -8px 8px #ffffff;
+    padding: 0;
+}
+
+.toggle-ball {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background-color: #dddddd;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+    box-shadow: 8px 8px 8px #aaaaaa, 
+                -8px -8px 8px #ffffff;
+}
+
+.toggle-container.active .toggle-ball {
+    transform: translateX(20px); 
+}
+
+.search-bar {
+    padding: 5px;
+    margin: 0 10px; 
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    background-color: #dddddd;
+    box-shadow:  5px 5px 10px #aaaaaa, 
+                -5px -5px 10px #ffffff;
+}
+
+.icon {
+    margin: 0;
+}
+
+.dark-mode .navbar {
+    background-color: #222222;
+    color: #bbbbbb;
+    box-shadow:  10px 10px 15px #111111, 
+                -10px -10px 15px #333333; 
+}
+
+.dark-mode .navbar a {
+    background-color: #222222;
+    color: #bbbbbb;
+    box-shadow:  5px 5px 10px #111111, 
+                -5px -5px 10px #333333; 
+}
+
+.dark-mode .search-bar {
+    background-color: #222222;
+    color: #bbbbbb;
+    box-shadow:  5px 5px 10px #111111, 
+                -5px -5px 10px #333333;
+}
+
+.dark-mode .toggle-container {
+    background-color: #222222; 
+    box-shadow: inset 8px 8px 8px #111111, 
+                inset -8px -8px 8px #333333; 
+}
+
+.dark-mode .toggle-ball {
+    background-color: #222222; 
+    box-shadow: 8px 8px 8px #111111, 
+                -8px -8px 8px #333333; 
+}
+
+.website-name span {
+    font-size: 3em; /* Adjust size as needed */
+    padding: 10px;
+    margin: 2px;
+    border-radius: 10px;
+    background-color: #dddddd;
+    box-shadow:  10px 10px 15px #aaaaaa, 
+                -10px -10px 15px #ffffff;
+    background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff);
+    background-size: 1600% 1600%;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 10s ease-in-out infinite;
+}
+
+@keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+.dark-mode .website-name span {
+    background-color: #222222;
+    box-shadow:  10px 10px 15px #111111, 
+                -10px -10px 15px #333333;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.section-heading1 {
+    text-align: center; /* Centers the text */
+    font-size: 3em; /* Makes the text larger */
+    font-weight: bold; /* Makes the text bold */
+    padding-top: 12%;
+    padding-bottom: 5%;
+}
+
+.section-heading {
+    text-align: center; /* Centers the text */
+    font-size: 3em; /* Makes the text larger */
+    font-weight: bold; /* Makes the text bold */
+    padding-top: 7%;
+    padding-bottom: 5%;
+}
+
+o {
+    height: 3em; /* Make the logo the same height as the text */
+    margin-right: 10px;
+}
+
+.neumorphic {
+    border-radius: 10px;
+    background-color: #dddddd;
+    box-shadow:  10px 10px 15px #aaaaaa, 
+                -10px -10px 15px #ffffff;
+}
+
+.dark-mode .neumorphic {
+    background-color: #222222;
+    box-shadow:  10px 10px 15px #111111, 
+                -10px -10px 15px #333333;
+}
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  animation: twinkle 1s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
