@@ -14,7 +14,7 @@ function login() {
     // Check if the user exists and the password matches
     if (user && user.password === enteredPassword) {
       alert("Login successful!");
-      window.location.href = "nv.html";
+      window.location.href = "https://sugarcanecstbatch15.streamlit.app/";
       // Redirect or perform other actions on successful login
     } else {
       alert("Invalid username or password");
